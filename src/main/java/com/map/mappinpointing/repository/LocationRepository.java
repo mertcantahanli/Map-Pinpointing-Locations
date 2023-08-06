@@ -1,4 +1,4 @@
-package com.map.mappinpointing.api;
+package com.map.mappinpointing.repository;
 
 import com.map.mappinpointing.entity.Location;
 import org.springframework.data.jpa.repository.JpaRepository;
