@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="map-container">
+    <div id="map"></div>
+    <button (click)="saveLocation()"style="margin-top: 10px; width: 80px; height: 40px;">Noktayı Kaydet</button>
+  </div>
+  <div class="locations-container">
+    <h3>Kaydedilmiş Noktalar</h3>
+      <div id="locations-list" >
+        <div class="item" *ngFor="let location of locations" (click)="onListItemClick(location)" >
+          Lat: {{ location.lat }}, Lng: {{ location.lng }}, Date: {{ location.datetime }}
+          <button (click)="deleteLocation(location.id)">Sil</button>
+        </div>
+      </div>
+    <button style="margin-top: 50px; width: 50px; height: 30px;" (click)="downloadLocations()">İndir</button>
+  </div>
+</div>
